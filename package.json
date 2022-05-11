@@ -3,9 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "prebuild":"npx rimraf dist",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:prettier": "prettier --check './src/**/*.tsx' --end-of-line auto",
+       "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
   },
   "dependencies": {
     "react": "^18.0.0",
