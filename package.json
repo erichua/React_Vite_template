@@ -3,19 +3,25 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "prebuild":"npx rimraf dist",
+    "prebuild": "npx rimraf dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:prettier": "prettier --check './src/**/*.tsx' --end-of-line auto",
-       "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.7.0",
+    "@mui/styled-engine-sc": "^5.7.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
