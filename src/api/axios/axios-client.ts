@@ -1,5 +1,5 @@
 import Axios,{AxiosError, AxiosInstance, AxiosResponse} from 'axios';
-import { isServer, isClient } from '../../helper';
+import { isServer, isClient } from '@/libs/helper';
 import { toastEnum, toastMsg } from '../../components/toast';
 const request_timeout = 1000;
 const url =import.meta.env.VITE_BASE_URL + '';
