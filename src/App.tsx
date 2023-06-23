@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {Container, Typography, Box, Button} from '@mui/material';
-import ProTip from './ProTip';
+import {Container,  Button} from 'react-bootstrap';
 import Copyright from './Copyright';
-import Dashboard from './Dashboard';
+import './App.scss';
+// import Dashboard from './Dashboard';
 
 export default function App() {
   return (
-    <Dashboard/>
+   <Container><Copyright/></Container>
   );
 }

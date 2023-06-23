@@ -1,10 +1,10 @@
-import Axios,{AxiosError, AxiosInstance, AxiosResponse} from 'axios';
+import Axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 import { isServer, isClient } from '@/libs/helper';
 import { toastEnum, toastMsg } from '../../components/toast';
 const request_timeout = 1000;
-const url =import.meta.env.VITE_BASE_URL + '';
+const url = import.meta.env.VITE_BASE_URL + '';
 
-interface ResponseObject<T>{
+interface ResponseObject<T> {
     data: T;
     statusCode: number;
     message: Message;
@@ -12,7 +12,7 @@ interface ResponseObject<T>{
 
 interface Message {
     messageCode: string;
-    dataObject? : object | null;
+    dataObject?: object | null;
 }
 
 const axios = Axios.create({
@@ -46,12 +46,12 @@ axios.interceptors.response.use(
         if (response.status === 401) {
             window.location.href = '/login';
         }
-        if (response.status ===409){
-            if(isClient()){
+        if (response.status === 409) {
+            if (isClient()) {
                 const { messageCode, dataObject } = res.message;
                 const options = dataObject
-                  ? { ...dataObject, ns: 'messageCode' }
-                  : { ns: 'messageCode' };
+                    ? { ...dataObject, ns: 'messageCode' }
+                    : { ns: 'messageCode' };
                 typeof window !== 'undefined' && toastMsg(toastEnum.DANGER, errorMsg);
             }
 
@@ -84,10 +84,10 @@ axios.interceptors.response.use(
                 case 406:
                     break;
                 default:
-                    // notification.error({
-                    //     message: `请求错误`,
-                    //     description: error.response.data?.msg || 'Error',
-                    // });
+                // notification.error({
+                //     message: `请求错误`,
+                //     description: error.response.data?.msg || 'Error',
+                // });
 
             }
         }
