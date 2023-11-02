@@ -11,7 +11,8 @@
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:prettier": "prettier --check './src/**/*.tsx' --end-of-line auto",
     "lint-staged": "lint-staged",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "clean": "npx rimraf node_modules"
   },
   "dependencies": {
     "@types/jest": "^29.5.2",
@@ -21,6 +22,7 @@
     "react": "^18.0.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.0.0",
+    "react-query": "^3.39.3",
     "react-toastify": "^9.1.3",
     "reactstrap": "^9.2.0",
     "sass": "^1.63.6",
@@ -29,7 +31,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "@types/react": "^18.0.0",
+    "@types/react": "^18.2.12",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",

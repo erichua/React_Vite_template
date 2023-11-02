@@ -7,14 +7,13 @@
     "allowJs": false,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "jsx": "react-jsx",
     "incremental": true ,
-    "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "isolatedModules": false,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
     "esModuleInterop": true,               /* By default (with esModuleInterop false or not set) TypeScript treats CommonJS/AMD/UMD modules similar to ES6 modules. */
     "target": "ESNEXT",                       /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
     "noEmit": true,                        /* Do not emit outputs. */
