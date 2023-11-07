@@ -14,11 +14,11 @@ const ReactQueryPage = () => {
   const carQuery = useQuery(['cat'], fetchData);
   console.log(carQuery.data);
   return (
-    <div>
+    <div className={'bg-gray-50'}>
       <p>{(carQuery.isLoading || carQuery.isFetching) && 'Loading...'}</p>
       <div>{JSON.stringify(carQuery.data)}</div>
       {!carQuery.isLoading && !carQuery.isFetching && (
-        <button
+        <button className='bg-blue-500  font-bold py-2 px-4 rounded-full border-2'
           onClick={() => {
             carQuery.refetch();
           }}

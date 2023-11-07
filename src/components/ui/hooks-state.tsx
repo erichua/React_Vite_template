@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '@/tailwind.css';
 interface stateInterface {
   name: string;
 }
@@ -10,8 +11,8 @@ const HooksState = (props: stateInterface) => {
   return (
     <div>
       {/* 这里展示的又是最新的值，因为在整个事件处理结束之后再重新渲染组件，此时state已经更新好的 */}
-      <span>{number}</span>
-      <button
+      <span className='text-red-950 font-extrabold'>{number}</span>
+      <button className='text-blue font-bold py-2 px-4 rounded-full border-2'
         onClick={() => {
           setNumber(number + 1);
           console.log(
