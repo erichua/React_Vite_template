@@ -9,7 +9,7 @@ const HooksRef = () => {
   return (
     <div>
       <div ref={dom} title='test'>
-        <button onClick={() => handleSubmit()}>提交</button>
+        <button onClick={() => handleSubmit() } className='bg-slate-300 rounded text-blue border-3'>提交</button>
       </div>
     </div>
   );

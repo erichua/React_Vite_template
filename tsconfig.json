@@ -20,7 +20,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@libs/*": ["src/libs/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@routers/*": ["src/routers/*"]
     }
   },
   "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx"],

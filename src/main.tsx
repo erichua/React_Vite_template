@@ -9,17 +9,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './tailwind.css';
+// import './tailwind.css';
+import '@/styles/reset.css';
 import reportWebVitals from './report-web-vitals';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import {RouterProvider}  from 'react-router-dom';
+import {router} from './routers/global-router';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const queryClient = new QueryClient();
+
+console.log(router);
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <App />
+      <RouterProvider router={router} />
       <ReactQueryDevtools initialIsOpen />
     </QueryClientProvider>
   </React.StrictMode>,

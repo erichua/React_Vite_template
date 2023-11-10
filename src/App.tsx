@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Container,  Button} from 'react-bootstrap';
 import Copyright from './Copyright';
-import ReactQueryPage from './enteries/react-query-page'
-import ListReactHooks from './enteries/list-react-hooks';
+import ReactQueryPage from './entries/react-query-page'
+import ListReactHooks from './entries/list-react-hooks';
 //import './App.scss';
 // import Dashboard from './Dashboard';
 
