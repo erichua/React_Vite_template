@@ -15,10 +15,6 @@
     "clean": "npx rimraf node_modules"
   },
   "dependencies": {
-    "@types/jest": "^29.5.8",
-    "@types/node": "^20.9.0",
-    "@types/react-router": "^5.1.20",
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^0.27.2",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
@@ -34,6 +30,10 @@
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
     "@babel/eslint-parser": "^7.22.15",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
