@@ -1,9 +1,8 @@
+import * as React from 'react';
+import { useEffect } from 'react';
 import { Link, Outlet, NavLink, useLoaderData } from 'react-router-dom';
-//import './App.scss';
-// import Dashboard from './Dashboard';
-
-export default function App() {
-  const data = useLoaderData();
+const LayoutPage = (): React.ReactElement => {
+  let data = useLoaderData();
   console.log(data);
   return (
     <div>
@@ -14,7 +13,6 @@ export default function App() {
             <Link to="/copyright/dssd/test">copyright</Link>
           </li>
           <li>
-            {' '}
             <NavLink
               to={`/home`}
               className={({ isActive, isPending }) =>
@@ -33,4 +31,6 @@ export default function App() {
       <Outlet />
     </div>
   );
-}
+};
+
+export default LayoutPage;

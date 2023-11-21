@@ -1,6 +1,6 @@
 import Axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 import { isServer, isClient } from '@/libs/helper';
-import { toastEnum, toastMsg } from '../../components/toast';
+import { toastEnum, toastMsg } from '@components/ui/toast';
 const request_timeout = 1000;
 const url = import.meta.env.VITE_BASE_URL + '';
 
@@ -48,11 +48,11 @@ axios.interceptors.response.use(
         }
         if (response.status === 409) {
             if (isClient()) {
-                const { messageCode, dataObject } = res.message;
+                const { messageCode, dataObject } = response.data.message;
                 const options = dataObject
                     ? { ...dataObject, ns: 'messageCode' }
                     : { ns: 'messageCode' };
-                typeof window !== 'undefined' && toastMsg(toastEnum.DANGER, errorMsg);
+                typeof window !== 'undefined' && toastMsg(toastEnum.DANGER, messageCode);
             }
 
         }

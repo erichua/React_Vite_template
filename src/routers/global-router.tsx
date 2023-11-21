@@ -3,11 +3,15 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Home } from '@pages/home-page';
 import ErrorPage from '@pages/error-page';
 import Copyright from '@/pages/copyright-page';
+import LayoutPage from '@/pages/layout-page';
 import APP from "@/App";
+import {AuthProvider} from "@api/Auth-Provider";
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <APP />,
+    element: <LayoutPage />,
+    // loader: ()=>{return {user:AuthProvider.userName,isAuthenticated:AuthProvider.isAuthenticated};},
+    // action: ()=>{AuthProvider.signin("tes");return null;},
     errorElement: <ErrorPage />,
  
   children: [
@@ -15,6 +19,10 @@ export const router = createBrowserRouter([
     path: '/copyright/:name/:license',
     element: <Copyright />,
   },
+  // {
+  //   path: '/blog/:slug',
+  //   element: <ActionPage />,
+  // },
   {
     path: '/home',
     element: <Home />,
@@ -22,5 +30,5 @@ export const router = createBrowserRouter([
   {
     path: '/unexist',
     element: <Copyright />,
-  }] },
-]);
+  }]}
+],{basename:'/',future:{}});
