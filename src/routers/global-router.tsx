@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import { Home } from '@pages/home-page';
-import ErrorPage from '@pages/error-page';
-import Copyright from '@/pages/copyright-page';
-import LayoutPage from '@/pages/layout-page';
+
 import APP from "@/App";
 import {AuthProvider} from "@api/Auth-Provider";
+
+
+const Copyright = lazy(async () => import('@pages/copyright-page'));
+const ErrorPage = lazy(async () => import('@pages/error-page'));
+const LayoutPage = lazy(async () => import('@pages/layout-page'));
+
+
 export const router = createBrowserRouter([
   {
     path: '/',
