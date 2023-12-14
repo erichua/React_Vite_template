@@ -64,21 +64,21 @@ axios.interceptors.response.use(
         let msg = "请求错误";
         if (error.response && error.response.status) {
             switch (error.response.status) {
-                // 401: 未登录                
-                // 未登录则跳转登录页面，并携带当前页面的路径                
-                // 在登录成功后返回当前页面，这一步需要在登录页操作。 
+                // 401: 未登录
+                // 未登录则跳转登录页面，并携带当前页面的路径
+                // 在登录成功后返回当前页面，这一步需要在登录页操作。
                 case 401:
                     window.location.href = '/login';
 
                     break;
-                // 403 token过期                    
-                // 登录过期对用户进行提示                    
-                // 清除本地token和清空vuex中token对象                    
-                // 跳转登录页面   
+                // 403 token过期
+                // 登录过期对用户进行提示
+                // 清除本地token和清空vuex中token对象
+                // 跳转登录页面
                 case 403:
                     window.location.href = '/login';
                     break;
-                // 404请求不存在                
+                // 404请求不存在
                 case 404:
                     break;
                 case 406:
