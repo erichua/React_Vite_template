@@ -1,4 +1,5 @@
 import { Link, Outlet, NavLink, useLoaderData } from 'react-router-dom'
+import CustomLink from './components/ui/custom-link'
 //import './App.scss';
 // import Dashboard from './Dashboard';
 
@@ -9,6 +10,9 @@ export default function App() {
         <div>
             <nav>
                 <ul>
+                    <li>
+                        <CustomLink to="/home">HomeTest</CustomLink>
+                    </li>
                     <li>
                         <Link to="/copyright/dssd/test"> copyright </Link>
                     </li>

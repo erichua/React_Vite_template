@@ -1,3 +1,4 @@
+import CustomLink from '@/components/ui/custom-link'
 import * as React from 'react'
 import { useEffect } from 'react'
 import { Link, Outlet, NavLink, useLoaderData } from 'react-router-dom'
@@ -8,6 +9,9 @@ const LayoutPage = (): React.ReactElement => {
         <div>
             <nav>
                 <ul>
+                    <li>
+                        <CustomLink to="/app">HomeTest</CustomLink>
+                    </li>
                     <li>
                         <Link to="/copyright/dssd/test">copyright</Link>
                     </li>
