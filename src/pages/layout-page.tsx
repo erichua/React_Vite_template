@@ -1,3 +1,4 @@
+import Menu from '@/components/menu'
 import CustomLink from '@/components/ui/custom-link'
 import * as React from 'react'
 import { useEffect } from 'react'
@@ -6,32 +7,22 @@ const LayoutPage = (): React.ReactElement => {
     let data = useLoaderData()
     console.log(data)
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <CustomLink to="/app">HomeTest</CustomLink>
-                    </li>
-                    <li>
-                        <Link to="/copyright/dssd/test">copyright</Link>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={`/home`}
-                            className={({ isActive, isPending }) =>
-                                isPending ? 'pending' : isActive ? 'active' : ''
-                            }
-                        >
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <a href={`/unesd`}>err</a>
-                    </li>
-                </ul>
-            </nav>
-            <Outlet />
-        </div>
+        <body>
+            <header>
+                <div className="mx-auto">
+                    <Menu />
+                </div>
+            </header>
+            <main>
+                <div className="mx-auto">
+                    <h1 className="text-3xl font-bold text-gray-900">
+                        Dashboard
+                    </h1>
+                    <Outlet></Outlet>
+                </div>
+            </main>
+            <footer></footer>
+        </body>
     )
 }
 

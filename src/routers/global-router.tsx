@@ -19,6 +19,10 @@ const routers = [
 
         children: [
             {
+                index: true,
+                element: <div> public area </div>,
+            },
+            {
                 path: '/copyright/:name/:license',
                 element: <Copyright />,
             },
