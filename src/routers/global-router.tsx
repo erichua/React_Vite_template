@@ -4,6 +4,7 @@ import { Home } from '@pages/home-page'
 
 import APP from '@/App'
 import { AuthProvider } from '@api/Auth-Provider'
+import Dashboard from '@/pages/dashboard'
 
 const Copyright = lazy(async () => import('@pages/copyright-page'))
 const ErrorPage = lazy(async () => import('@pages/error-page'))
@@ -20,7 +21,7 @@ const routers = [
         children: [
             {
                 index: true,
-                element: <div> public area </div>,
+                element: <Dashboard />,
             },
             {
                 path: '/copyright/:name/:license',

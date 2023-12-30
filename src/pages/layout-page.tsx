@@ -3,25 +3,38 @@ import CustomLink from '@/components/ui/custom-link'
 import * as React from 'react'
 import { useEffect } from 'react'
 import { Link, Outlet, NavLink, useLoaderData } from 'react-router-dom'
+import SiderBar from './sider-bar'
+import HeaderBar from './header-bar'
 const LayoutPage = (): React.ReactElement => {
     let data = useLoaderData()
     console.log(data)
     return (
         <body>
-            <header>
-                <div className="mx-auto">
-                    <Menu />
+            <div className="mx-auto">
+                <div>
+                    <HeaderBar />
                 </div>
-            </header>
-            <main>
-                <div className="mx-auto">
-                    <h1 className="text-3xl font-bold text-gray-900">
-                        Dashboard
-                    </h1>
-                    <Outlet></Outlet>
+                <div className="flex">
+                    <SiderBar storedSidebarExpanded={false} />
+                    <div className="w-5/6">
+                        <Outlet></Outlet>
+                    </div>
                 </div>
-            </main>
-            <footer></footer>
+                <footer>sdsdsd</footer>
+            </div>
+            {/* <div className="float-right items-stretch">
+                <header>
+                    <div>
+                        <Menu />
+                    </div>
+                </header>
+                <main>
+                    <div>
+                        <Outlet></Outlet>
+                    </div>
+                </main>
+                <footer></footer>
+            </div> */}
         </body>
     )
 }

@@ -1,10 +1,25 @@
 import React from 'react'
+import { className } from '@/utils/class-name'
 
 function Menu() {
+    function resolveClass({
+        active,
+        disabled,
+    }: {
+        active: boolean
+        disabled: boolean
+    }) {
+        return className(
+            'block w-full text-left px-4 py-2 text-sm leading-5 text-gray-700',
+            active && 'bg-gray-100 text-gray-900',
+            disabled && 'cursor-not-allowed opacity-50',
+        )
+    }
+
     return (
         <>
             <nav className="bg-gray-800">
-                <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div className="max-auto px-2 sm:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
                         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                             <button
