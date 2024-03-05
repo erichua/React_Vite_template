@@ -5,8 +5,11 @@ module.exports = {
         node: true,
     },
     extends: [
-        "alloy", "alloy/react", "alloy/typescript",
-        "plugin:@typescript-eslint/recommended"
+        "alloy",
+        "alloy/react",
+        "alloy/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:storybook/recommended"
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -16,7 +19,7 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: "module",
     },
-    plugins: ["react", "@typescript-eslint",  "prettier"],
+    plugins: ["react", "@typescript-eslint", "prettier"],
     rules: {
         "arrow-body-style": 0,
         "jsx-a11y/label-has-for": 0,

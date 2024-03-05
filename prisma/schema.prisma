@@ -1,0 +1,358 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:633633@192.168.32.94:8009/vendorportal"
+}
+
+model item_intro {
+  application_id                String                @id @db.Char(8)
+  vendor_id                     String?               @db.Char(5)
+  payee                         String?               @db.VarChar(30)
+  buyer_code                    String?               @db.Char(3)
+  status                        String?               @db.Char(1)
+  reason_code                   String?               @db.Char(3)
+  gtin                          String?               @db.Char(14)
+  item_id                       String?               @db.Char(6)
+  eng_name                      String?               @db.VarChar(40)
+  chn_name                      String?               @db.VarChar(40)
+  alt_name                      String?               @db.VarChar(40)
+  eng_brand                     String?               @db.VarChar(40)
+  chn_brand                     String?               @db.VarChar(40)
+  alt_brand                     String?               @db.VarChar(40)
+  eng_flavour                   String?               @db.VarChar(40)
+  chn_flavour                   String?               @db.VarChar(40)
+  alt_flavour                   String?               @db.VarChar(40)
+  eng_full_name                 String?               @db.VarChar(40)
+  chn_full_name                 String?               @db.VarChar(40)
+  alt_full_name                 String?               @db.VarChar(40)
+  eng_pos_name                  String?               @db.Char(30)
+  chn_pos_name                  String?               @db.Char(20)
+  alt_pos_name                  String?               @db.Char(30)
+  stocking_uom_id               String?               @db.Char(5)
+  stocking_unit_size            String?               @db.Char(10)
+  vendor_type_id                String?               @db.Char(1)
+  purchase_pack_1               Decimal?              @db.Decimal(9, 4)
+  purchase_pack_2               Decimal?              @db.Decimal(9, 4)
+  purchase_pack_3               Decimal?              @db.Decimal(9, 4)
+  purchase_pack_4               Decimal?              @db.Decimal(9, 4)
+  purchase_uom_id               String?               @db.Char(5)
+  reg_cost                      Decimal?              @db.Decimal(18, 2)
+  currency                      String?               @db.Char(3)
+  market_fund                   Decimal?              @db.Decimal(18, 2)
+  market_price                  Decimal?              @db.Decimal(18, 2)
+  product_life                  Int?
+  shelf_life                    Int?
+  first_order_discount          Decimal?              @db.Decimal(18, 2)
+  entry_point                   Decimal?              @db.Decimal(18, 2)
+  volume_discount               Decimal?              @db.Decimal(18, 2)
+  return_guarantee              Boolean?
+  gst                           Boolean?
+  pst                           Boolean?
+  vendor_item_id                String?               @db.VarChar(30)
+  lead_time                     Int?                  @db.SmallInt
+  delivery_cycle                Int?                  @db.SmallInt
+  minimum_order_qty             Decimal?              @db.Decimal(18, 2)
+  order_mtp                     Decimal?              @db.Decimal(18, 2)
+  storage_temperature           Int?                  @db.SmallInt
+  crf_code                      String?               @db.Char(3)
+  bottle_link_code              String?               @db.Char(2)
+  country_origin_id             String?               @db.Char(2)
+  purchase_unit_depth           Decimal?              @db.Decimal(18, 2)
+  purchase_unit_width           Decimal?              @db.Decimal(18, 2)
+  purchase_unit_height          Decimal?              @db.Decimal(18, 2)
+  purchase_unit_dim_uom         String?               @db.Char(5)
+  purchase_unit_weight          Decimal?              @db.Decimal(18, 2)
+  purchase_unit_weight_uom      String?               @db.Char(5)
+  selling_unit_depth            Decimal?              @db.Decimal(18, 2)
+  selling_unit_width            Decimal?              @db.Decimal(18, 2)
+  selling_unit_height           Decimal?              @db.Decimal(18, 2)
+  selling_unit_dim_uom          String?               @db.Char(5)
+  selling_unit_weight           Decimal?              @db.Decimal(18, 2)
+  selling_unit_weight_uom       String?               @db.Char(5)
+  catg_id                       String?               @db.Char(4)
+  commodity                     String?               @db.Char(3)
+  product_content               Boolean?
+  store_order_cost              Decimal?              @db.Decimal(18, 2)
+  suggest_retail_price          Decimal?              @db.Decimal(18, 2)
+  seasonal                      Int?                  @db.TinyInt
+  dept_id                       String?               @db.Char(3)
+  source_order                  String?               @db.Char(2)
+  source_shipping               String?               @db.Char(2)
+  order_method                  String?               @db.Char(1)
+  competitor_price              Decimal?              @db.Decimal(18, 2)
+  remark                        String?               @db.VarChar(60)
+  family_code                   String?               @db.Char(6)
+  ordering_cycle                Int?
+  sample_recv_date              DateTime?             @db.DateTime(0)
+  selling_mode                  Int?                  @db.TinyInt
+  stock_flag                    Int?                  @db.TinyInt
+  authority_control             Int?                  @db.TinyInt
+  create_time                   DateTime?             @db.DateTime(0)
+  create_by                     String?               @db.Char(8)
+  passed_time                   DateTime?             @db.DateTime(0)
+  passed_by                     String?               @db.Char(8)
+  approved_time                 DateTime?             @db.DateTime(0)
+  approved_by                   String?               @db.Char(8)
+  update_time                   DateTime?             @db.DateTime(0)
+  update_by                     String?               @db.Char(8)
+  warehouse_storage_temperature Int?                  @db.SmallInt
+  first_order_minimum_qty       Decimal?              @db.Decimal(18, 2)
+  item_type                     Int?                  @db.TinyInt
+  keyid                         String?               @db.VarChar(100)
+  selling_storage_temperature   Int?                  @db.SmallInt
+  buyer_name                    String?               @db.VarChar(50)
+  tax_code                      String?               @db.VarChar(20)
+  item_intro_package            item_intro_package[]
+  item_intro_province           item_intro_province[]
+}
+
+model item_intro_package {
+  application_id              String                        @db.Char(8)
+  package_id                  Int                           @db.TinyInt
+  size                        String?                       @db.VarChar(20)
+  pack1                       Decimal?                      @db.Decimal(9, 4)
+  pack2                       Decimal?                      @db.Decimal(9, 4)
+  pack3                       Decimal?                      @db.Decimal(9, 4)
+  pack4                       Decimal?                      @db.Decimal(9, 4)
+  uom_id                      String?                       @db.Char(5)
+  gtin                        String?                       @db.Char(14)
+  store_selling_pack          Boolean?
+  dc_selling_pack             Boolean?
+  purchase_pack               Boolean?
+  gst                         Boolean?
+  create_time                 DateTime?                     @db.DateTime(0)
+  create_by                   String?                       @db.Char(8)
+  update_time                 DateTime?                     @db.DateTime(0)
+  update_by                   String?                       @db.Char(8)
+  keyid                       String?                       @db.VarChar(100)
+  tax_code                    String?                       @db.VarChar(20)
+  item_intro                  item_intro                    @relation(fields: [application_id], references: [application_id], onUpdate: Restrict, map: "item_intro_package_ibfk_1")
+  item_intro_province_package item_intro_province_package[]
+
+  @@id([application_id, package_id])
+}
+
+model item_intro_processing {
+  application_id String  @id @db.Char(8)
+  status         String? @db.Char(1)
+  item_id        String? @db.Char(6)
+}
+
+model item_intro_province {
+  application_id              String                        @db.Char(8)
+  province_id                 String                        @db.Char(3)
+  carry_control               Int                           @db.TinyInt
+  order_method                String?                       @db.Char(1)
+  item_role                   String?                       @db.Char(8)
+  event_type                  String?                       @db.VarChar(10)
+  store_shelf_life            Int?
+  store_safety_stock_qty      Decimal?                      @db.Decimal(9, 4)
+  pst                         Boolean?
+  buyer_code                  String?                       @db.Char(3)
+  exclusive                   Boolean?
+  grade_id                    Int?                          @db.TinyInt
+  dc_carry_flag               Boolean?
+  dc_safety_stock_days        Int?
+  crrn                        String?                       @db.VarChar(20)
+  order_block                 Boolean?
+  license_code                String?                       @db.VarChar(10)
+  contract_no                 String?                       @db.VarChar(10)
+  address_chain               String?                       @db.Char(3)
+  create_time                 DateTime?                     @db.DateTime(0)
+  create_by                   String?                       @db.Char(8)
+  update_time                 DateTime?                     @db.DateTime(0)
+  update_by                   String?                       @db.Char(8)
+  keyid                       String?                       @db.VarChar(100)
+  item_intro                  item_intro                    @relation(fields: [application_id], references: [application_id], onUpdate: Restrict, map: "item_intro_province_ibfk_1")
+  item_intro_province_package item_intro_province_package[]
+  item_intro_supply           item_intro_supply?
+
+  @@id([application_id, province_id])
+}
+
+model item_intro_province_package {
+  application_id      String              @db.Char(8)
+  package_id          Int                 @db.TinyInt
+  province_id         String              @db.Char(3)
+  dc_purchase_cost    Decimal?            @db.Decimal(9, 4)
+  store_purchase_cost Decimal?            @db.Decimal(9, 4)
+  retail_price        Decimal?            @db.Decimal(9, 4)
+  online_package      Boolean?
+  create_time         DateTime?           @db.DateTime(0)
+  create_by           String?             @db.Char(8)
+  update_time         DateTime?           @db.DateTime(0)
+  update_by           String?             @db.Char(8)
+  keyid               String?             @db.VarChar(100)
+  item_intro_package  item_intro_package  @relation(fields: [application_id, package_id], references: [application_id, package_id], onUpdate: Restrict, map: "item_intro_province_package_ibfk_1")
+  item_intro_province item_intro_province @relation(fields: [application_id, province_id], references: [application_id, province_id], onUpdate: Restrict, map: "item_intro_province_package_ibfk_2")
+
+  @@id([application_id, package_id, province_id])
+  @@index([application_id, province_id], map: "application_id")
+}
+
+model item_intro_supply {
+  application_id            String              @db.Char(8)
+  province_id               String              @db.Char(3)
+  owner_dept                String?             @db.Char(2)
+  order_dept_list           String?             @db.VarChar(50)
+  new_store_order_dept_list String?             @db.VarChar(50)
+  model_no                  String?             @db.VarChar(20)
+  product_group             String?             @db.Char(4)
+  material                  String?             @db.Char(5)
+  color                     String?             @db.Char(50)
+  depth                     Decimal?            @db.Decimal(9, 4)
+  width                     Decimal?            @db.Decimal(9, 4)
+  height                    Decimal?            @db.Decimal(9, 4)
+  dim_uom_id                String?             @db.Char(5)
+  volume                    String?             @db.VarChar(30)
+  weight                    String?             @db.VarChar(30)
+  photo                     String?             @db.VarChar(100)
+  create_time               DateTime?           @db.DateTime(0)
+  create_by                 String?             @db.Char(8)
+  update_time               DateTime?           @db.DateTime(0)
+  update_by                 String?             @db.Char(8)
+  keyid                     String?             @db.VarChar(100)
+  item_intro_province       item_intro_province @relation(fields: [application_id, province_id], references: [application_id, province_id], onUpdate: Restrict, map: "item_intro_supply_ibfk_1")
+
+  @@id([application_id, province_id])
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model notification {
+  id              BigInt    @id @default(autoincrement())
+  user_id         String    @db.VarChar(8)
+  vendor_id       String?   @db.VarChar(8)
+  status          String?   @db.VarChar(1)
+  type            String    @db.VarChar(20)
+  priority        Int?      @default(0)
+  title           String?   @db.VarChar(200)
+  content         String?   @db.VarChar(500)
+  created_by      String    @db.VarChar(8)
+  created_time    DateTime  @db.DateTime(0)
+  read_time       DateTime? @db.DateTime(0)
+  action          String?   @db.VarChar(100)
+  available_start DateTime  @db.DateTime(0)
+  available_end   DateTime  @db.DateTime(0)
+}
+
+model po_hist_dtl {
+  pohistdtlpk    Int         @default(autoincrement())
+  pono           String      @db.VarChar(15)
+  seqno          Int?
+  itemid         String?     @db.VarChar(8)
+  upc            String?     @db.VarChar(13)
+  engname        String?     @db.VarChar(40)
+  frnname        String?     @db.VarChar(40)
+  chnname        String?     @db.VarChar(20)
+  size           String?     @db.VarChar(10)
+  pack           Decimal     @db.Decimal(7, 2)
+  ordmtp         Decimal?    @db.Decimal(10, 2)
+  puruom         String?     @db.VarChar(5)
+  catgid         String?     @db.Char(4)
+  deptid         Decimal     @db.Decimal(7, 2)
+  cost           Decimal     @db.Decimal(7, 2)
+  promotion      Int         @db.TinyInt
+  locid          String?     @db.Char(3)
+  bay            String?     @db.VarChar(6)
+  vendoritemcode String?     @db.VarChar(30)
+  ordmethod      String?     @db.Char(1)
+  orderqty       Decimal     @db.Decimal(7, 2)
+  nostock        Int?        @db.TinyInt
+  invqty         Decimal?    @db.Decimal(18, 2)
+  invcost        Decimal?    @db.Decimal(18, 2)
+  invom          Decimal?    @db.Decimal(18, 2)
+  shipqty        Decimal?    @db.Decimal(18, 2)
+  shipcost       Decimal?    @db.Decimal(18, 2)
+  shipom         Decimal?    @db.Decimal(18, 2)
+  orgcost        Decimal?    @db.Decimal(18, 2)
+  orgorderqty    Decimal?    @db.Decimal(18, 2)
+  orgordmtp      Decimal?    @db.Decimal(10, 2)
+  altvendor      String?     @db.Char(5)
+  altcost        Decimal?    @db.Decimal(18, 2)
+  po_hist_hdr    po_hist_hdr @relation(fields: [pono], references: [pono], onUpdate: Restrict, map: "po_hist_dtl_ibfk_1")
+
+  @@id([pohistdtlpk, pono])
+  @@index([pono], map: "pono")
+}
+
+model po_hist_hdr {
+  splitid       String?       @db.VarChar(10)
+  pono          String        @id @db.VarChar(15)
+  vendorid      String?       @db.Char(6)
+  vengname      String?       @db.Char(30)
+  vchnname      String?       @db.Char(30)
+  tel           String?       @db.Char(16)
+  fax           String?       @db.Char(16)
+  postatus      String?       @db.Char(1)
+  poissuedate   DateTime      @db.DateTime(0)
+  poconfirmdate DateTime?     @db.DateTime(0)
+  storeid       String?       @db.Char(3)
+  eddate        DateTime      @db.DateTime(0)
+  remark        String?       @db.VarChar(80)
+  owner         String?       @db.Char(6)
+  customeracct  String?       @db.Char(6)
+  hrdeptid      String?       @db.Char(5)
+  opstoreid     String?       @db.Char(3)
+  batchid       String?       @db.Char(13)
+  poflag        Int           @db.TinyInt
+  porecvdate    DateTime?     @db.DateTime(0)
+  chgtime       DateTime      @db.DateTime(0)
+  chgby         String?       @db.Char(8)
+  po_hist_dtl   po_hist_dtl[]
+}
+
+model ref_status {
+  status_code               String   @id @db.Char(1)
+  status_description        String?  @db.VarChar(20)
+  status_french_description String?  @db.VarChar(20)
+  created_by                String?  @db.Char(8)
+  created_time              DateTime @db.DateTime(0)
+  chg_by                    String?  @db.Char(8)
+  chg_time                  DateTime @db.DateTime(0)
+  vendor_status             String?  @db.VarChar(30)
+  vendor_status_frn         String?  @db.VarChar(30)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model ris_test {
+  application_id String @db.Char(8)
+
+  @@ignore
+}
+
+model vendor {
+  vendorid  String   @id @db.Char(6)
+  engname   String?  @db.VarChar(30)
+  chnname   String?  @db.VarChar(30)
+  frnname   String?  @db.VarChar(30)
+  street    String?  @db.VarChar(40)
+  city      String?  @db.VarChar(40)
+  province  String?  @db.VarChar(20)
+  zip       String?  @db.VarChar(10)
+  contact   String?  @db.VarChar(20)
+  tel       String?  @db.VarChar(16)
+  fax       String?  @db.VarChar(16)
+  lang      String?  @db.VarChar(3)
+  type      String?  @db.VarChar(4)
+  eislocid  String?  @db.VarChar(3)
+  minordqty Decimal? @db.Decimal(18, 2)
+  minordamt Decimal? @db.Decimal(18, 2)
+  posentby  Int
+  country   String?  @db.VarChar(8)
+  isdummy   Int
+  chgtime   DateTime @db.DateTime(0)
+  chgby     String?  @db.VarChar(8)
+  locid     String?  @db.VarChar(3)
+}
+
+model vendor_user {
+  vendoruserpk String   @id @db.VarChar(18)
+  userid       String?  @db.VarChar(8)
+  vendorid     String?  @db.VarChar(8)
+  status       String?  @db.Char(1)
+  chgtime      DateTime @db.DateTime(0)
+  chgby        String?  @db.VarChar(8)
+}

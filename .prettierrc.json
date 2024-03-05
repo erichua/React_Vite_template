@@ -4,5 +4,8 @@
     "arrowParens": "always",
     "htmlWhitespaceSensitivity": "ignore",
     "trailingComma": "all",
-    "tabWidth": 4
+    "tabWidth": 4,
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ]
 }
