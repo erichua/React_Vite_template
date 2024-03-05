@@ -15,7 +15,7 @@ const SiderBar = (storedSidebarExpanded: {
                 <p className="menu-label">General</p>
                 <ul className="menu-list">
                     <li className="--set-active-index-html">
-                        <a href="index.html">
+                        <a href="/Dashboard">
                             <span className="icon">
                                 <i className="mdi mdi-desktop-mac"></i>
                             </span>
@@ -26,11 +26,11 @@ const SiderBar = (storedSidebarExpanded: {
                 <p className="menu-label">Examples</p>
                 <ul className="menu-list">
                     <li className="--set-active-tables-html">
-                        <a href="tables.html">
+                        <a href="/copyright/eric/mit">
                             <span className="icon">
                                 <i className="mdi mdi-table"></i>
                             </span>
-                            <span className="menu-item-label">Tables</span>
+                            <span className="menu-item-label">CopyRight</span>
                         </a>
                     </li>
                     <li className="--set-active-forms-html active">

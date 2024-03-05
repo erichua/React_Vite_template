@@ -9,7 +9,7 @@ const LayoutPage = (): React.ReactElement => {
     let data = useLoaderData()
     console.log(data)
     return (
-        <body>
+        <>
             <div className="mx-auto">
                 <div>
                     <HeaderBar />
@@ -35,7 +35,7 @@ const LayoutPage = (): React.ReactElement => {
                 </main>
                 <footer></footer>
             </div> */}
-        </body>
+        </>
     )
 }
 

@@ -19,13 +19,13 @@ const HeaderBar = () => {
                                 className="block h-6 w-6"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke="currentColor"
                                 aria-hidden="true"
                             >
                                 <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                                 />
                             </svg>
@@ -34,13 +34,13 @@ const HeaderBar = () => {
                                 className="hidden h-6 w-6"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke="currentColor"
                                 aria-hidden="true"
                             >
                                 <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     d="M6 18L18 6M6 6l12 12"
                                 />
                             </svg>
@@ -54,7 +54,7 @@ const HeaderBar = () => {
                                 alt="Your Company"
                             />
                         </div>
-                        <div className="items-center transition-all rounded-md">
+                        <div className="items-center rounded-md transition-all">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -62,10 +62,10 @@ const HeaderBar = () => {
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                className="items-center text-blue-500 m-2"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="m-2 items-center text-blue-500"
                                 id="sidebar-toggle"
                             >
                                 <line x1="18" y1="10" x2="6" y2="10"></line>
@@ -78,26 +78,26 @@ const HeaderBar = () => {
                             <div className="flex space-x-4">
                                 <a
                                     href="#"
-                                    className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                                     aria-current="page"
                                 >
                                     Dashboard
                                 </a>
                                 <a
                                     href="#"
-                                    className="text-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-700 hover:text-white"
                                 >
                                     Team
                                 </a>
                                 <a
                                     href="#"
-                                    className="text-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-700 hover:text-white"
                                 >
                                     Projects
                                 </a>
                                 <a
                                     href="#"
-                                    className="text-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-700 hover:text-white"
                                 >
                                     Calendar
                                 </a>
@@ -115,13 +115,13 @@ const HeaderBar = () => {
                                 className="h-6 w-6"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke="currentColor"
                                 aria-hidden="true"
                             >
                                 <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
                                 />
                             </svg>
@@ -166,7 +166,7 @@ const HeaderBar = () => {
                                     href="#"
                                     className="block px-4 py-2 text-sm text-gray-700"
                                     role="menuitem"
-                                    tabindex="-1"
+                                    tabIndex="-1"
                                     id="user-menu-item-1"
                                 >
                                     Settings
@@ -175,7 +175,7 @@ const HeaderBar = () => {
                                     href="#"
                                     className="block px-4 py-2 text-sm text-gray-700"
                                     role="menuitem"
-                                    tabindex="-1"
+                                    tabIndex="-1"
                                     id="user-menu-item-2"
                                 >
                                     Sign out
@@ -190,26 +190,26 @@ const HeaderBar = () => {
                 <div className="space-y-1 px-2 pb-3 pt-2">
                     <a
                         href="#"
-                        className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                        className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
                         aria-current="page"
                     >
                         Dashboard
                     </a>
                     <a
                         href="#"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                         Team
                     </a>
                     <a
                         href="#"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                         Projects
                     </a>
                     <a
                         href="#"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                         Calendar
                     </a>

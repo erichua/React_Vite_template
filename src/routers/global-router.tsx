@@ -21,6 +21,7 @@ const routers = [
         children: [
             {
                 index: true,
+                path: '/Dashboard',
                 element: <Dashboard />,
             },
             {
